@@ -34,8 +34,8 @@
     <x-main-nav-bar homeActive="active"/>
     <x-home-hero />
     <x-blood-donation-benefits />
-    <x-faq />
-    <x-cta />
+    {{-- <x-faq /> --}}
+    {{-- <x-cta /> --}}
     <x-stats />
     <x-footer />
 @endsection

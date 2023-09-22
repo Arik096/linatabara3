@@ -27,7 +27,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'max:100',
                 Rule::unique(User::class)->ignore($user->id),
             ],
-            'phone' => ['required', 'numeric', 'digits:10', Rule::unique(User::class)->ignore($user->id)],
+            'phone' => ['required', 'numeric', Rule::unique(User::class)->ignore($user->id)],
             'wilaya' => ['required', 'exists:wilayas,id'],
             'daira' => ['required', 'exists:dairas,id'],
         ],

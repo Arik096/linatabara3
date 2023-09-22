@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-white shadow-sm sticky-lg-top">
     <div class="container">
         <a class="navbar-brand d-flex" href="{{ url('') }}">
-            <img src="{{ asset('imgs/algerianMapFlag.svg') }}" class="pb-2" alt="Algerian Map Flag" height="40px">
-            <span class="mx-2">|</span>
+            {{-- <img src="{{ asset('imgs/algerianMapFlag.svg') }}" class="pb-2" alt="Algerian Map Flag" height="40px"> --}}
+            {{-- <span class="mx-2">|</span> --}}
             <img src="{{ asset(Lang::locale() === 'ar' ? 'imgs/linatabara3Logo.png' : 'imgs/linatabara3LogoAscii.png' ) }}" alt="Linatabara3 Logo" height="{{ LaravelLocalization::getCurrentLocale() === 'ar' ? '40px' : '35px' }}">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
@@ -11,12 +11,12 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarToggler">
 
-            <div class="languageSwitcher text-center">
+            {{-- <div class="languageSwitcher text-center">
                 <a rel="alternate" hreflang="{{ LaravelLocalization::getCurrentLocaleNative() === 'Français' ? 'ar' : 'fr' }}" href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocaleNative() === 'Français' ? 'ar' : 'fr', null, [], true) }}"
                     style="{{ LaravelLocalization::getCurrentLocale() === 'fr' ? " font-family: 'Noto Kufi Arabic', sans-serif;" : "font-family: 'Nunito', sans-serif;" }}"
                     class="px-3 mt-2 mt-lg-0 btn btn-danger btn-sm py-1">{{
                     LaravelLocalization::getCurrentLocaleNative() === 'Français' ? 'العربية' : 'Francais' }}</a>
-            </div>
+            </div> --}}
 
             <ul class="navbar-nav mb-2 mb-lg-0 fw-bold">
                 <li class="nav-item">
@@ -27,18 +27,22 @@
                     <a class="nav-link {{ $donorsActive ?? '' }}" href="{{ route('donorsPage') }}">{{
                         __('homePage.donors') }}</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link {{ $aboutActive ?? '' }}" href="{{ route('aboutPage') }}">{{ __('homePage.about')
                         }}</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
+                    <a class="nav-link">Hospital list</a>
+                </li>
+
+                {{-- <li class="nav-item">
 
                     <button type="button" class="nav-link btn btn-link" data-bs-toggle="modal"
                         data-bs-target="#contactModal">
                         {{ __('homePage.contact') }}
                     </button>
 
-                </li>
+                </li> --}}
             </ul>
 
             @auth

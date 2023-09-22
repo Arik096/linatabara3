@@ -56,7 +56,7 @@
                 <select data-validator-func="wilayaValidator" name="wilaya" id="wilayaSelect" class="form-select" required>
                     <option selected hidden style="display:none" value="">{{ __('homePage.wilaya') }}</option>
                     @foreach ($wilayas as $wilaya)
-                        <option value="{{ $wilaya['id'] }}">{{ $wilaya['id'] . '. ' . $wilaya['name'] }} </option>
+                        <option value="{{ $wilaya['id'] }}">{{ $wilaya['name'] }} </option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">{{ __('registerPage.wilayaValidation') }}</div>
@@ -74,7 +74,7 @@
 
             <div>
                 <label for="id_phone" class="form-label mt-3">{{ __('registerPage.phoneNumber') }}</label>
-                <input dir="auto" data-validator-func="phoneValidator" type="text" name="phone" maxlength="10"
+                <input dir="auto" data-validator-func="phoneValidator" type="text" name="phone" maxlength="11"
                     class="form-control" required id="id_phone" value="{{ old('phone') }}" />
                 <div class="invalid-feedback">{{ __('registerPage.phoneNumberValidation') }}</div>
             </div>

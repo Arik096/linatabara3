@@ -33,7 +33,7 @@ function dairaValidator(){
 }
 
 function phoneValidator(){
-    if(/\D/.test(phone.value) || phone.value.length < 10 || !phone.value.startsWith('05') & !phone.value.startsWith('06') & !phone.value.startsWith('07')) {
+    if(/\D/.test(phone.value) || phone.value.length < 11) {
         phone.classList.add('is-invalid');
         return false;
     } else{

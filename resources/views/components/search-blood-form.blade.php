@@ -28,7 +28,7 @@
                         </option>
                         @foreach ($wilayas as $wilaya)
                             <option value="{{ $wilaya->id }}" @selected(old('wilaya') == $wilaya->id)>
-                                {{ $wilaya->id . '. ' . $wilaya->name }}
+                                {{ $wilaya->name }}
                             </option>
                         @endforeach
                     </select>

@@ -10,6 +10,6 @@
 
 return [
     'websiteTitle' => 'bloodDoner',
-    'websiteTitleDescription' => ':websiteTitle | Nous connectons les donneurs de sang avec les demandeurs de sang',
-    'logOut' => 'Se déconnecter',
+    'websiteTitleDescription' => ':websiteTitle | We connect blood donors with blood seekers',
+    'logOut' => 'Sign out',
 ];
